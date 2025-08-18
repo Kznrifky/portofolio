@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rifky · Data Enthusiast</title>
+  <meta name="description" content="Rifky — From raw data to real-world impact." />
+  <meta name="color-scheme" content="light dark" />
+  <!-- Tailwind Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#0f3d8e',
+              600: '#1348a8',
+              700: '#0d326f'
+            },
+            secondary: {
+              DEFAULT: '#64c9ff',
+              600: '#46bfff'
+            },
+            surface: '#0f172a',
+            surface2: '#111827',
+            borderc: '#1f2a44'
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(0,0,0,.35)'
+          },
+          maxWidth: {
+            wrap: '1120px'
+          },
+          borderRadius: {
+            xl2: '1.25rem'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <style>
+    body{font-family:Inter,ui-sans-serif,system-ui}
+    .glass{background:rgba(11,16,34,.7);backdrop-filter:saturate(140%) blur(12px)}
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#0b1220] to-[#0b1022] text-slate-100">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 border-b border-white/10 glass">
+    <div class="mx-auto max-w-wrap px-5 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2 font-bold tracking-tight">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-secondary to-primary shadow-[0_0_0_4px_rgba(100,201,255,.2)]"></span>
+        Portofolio
+      </div>
+      <nav aria-label="Primary">
+        <ul class="flex gap-3 text-sm">
+          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#about">About</a></li>
+          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#projects">Projects</a></li>
+          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="mx-auto max-w-wrap px-5 grid md:grid-cols-[1.15fr_.85fr] gap-7 items-center py-16">
+      <div>
+        <span class="inline-flex items-center gap-2 text-secondary border border-borderc rounded-full px-3 py-1 bg-secondary/10">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+          From raw data to real-world impact
+        </span>
+        <h1 class="text-3xl sm:text-4xl font-bold leading-tight mt-3">Hi, I'm Rifky — Data Enthusiast</h1>
+        <p class="text-slate-400 mt-2 max-w-prose">A Fresh graduate in Informatics from UPN Veteran Jawa Timur with a strong interest in the field of data. Proficient in data analysis, Python programming, and SQL, with experience in data visualization and strong problem-solving skills. Highly motivated to deepen expertise in data-related fields, driven by strong curiosity and a passion for continuous learning.</p>
+        <div class="flex gap-3 mt-5 flex-col sm:flex-row">
+          <a class="inline-flex justify-center rounded-xl bg-primary text-white font-semibold px-4 py-3 shadow-soft hover:-translate-y-0.5 transition" href="#projects">See Projects</a>
+          <a class="inline-flex justify-center rounded-xl border border-borderc bg-white/5 px-4 py-3" href="#contact">Contact Me</a>
+        </div>
+      </div>
+      <aside class="bg-gradient-to-b from-[#0b1730] to-[#0b1630] border border-borderc rounded-xl2 p-4 shadow-soft">
+        <div class="relative overflow-hidden rounded-xl2 aspect-[4/5] bg-[#071127] border border-white/10">
+          <!-- Replace the src below with your image path -->
+          <img src="images/rifky.png" alt="Rifky portrait" class="w-full h-full object-cover" />
+          <div class="absolute -inset-x-10 -bottom-20 h-40 bg-[radial-gradient(60%_60%_at_50%_0%,rgba(100,201,255,.35)_0%,rgba(100,201,255,0)_70%)] blur-xl"></div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Education -->
+    <section class="mx-auto max-w-wrap px-5 py-14 border-t border-white/10">
+      <h2 class="text-2xl font-semibold">Education</h2>
+      <p class="text-slate-400 mt-2"></p>
+      <div class="grid md:grid-cols-2 gap-5 mt-4">
+      <div class="bg-white/5 border border-borderc rounded-xl p-5">
+        <span class="text-secondary text-sm">2021 - 2025</span>
+        <h3 class="font-semibold mt-1">Bachelor of Informatics</h3>
+        <p class="text-sm text-slate-400">UPN Veteran Jawa Timur</p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-slate-300 text-sm">
+        </ul>
+      </div>
+      <div class="bg-white/5 border border-borderc rounded-xl p-5">
+        <span class="text-secondary text-sm">2018 - 2021</span>
+        <h3 class="font-semibold mt-1">High School</h3>
+        <p class="text-sm text-slate-400">SMA Muhammadiyah 10 Surabaya</p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-slate-300 text-sm">
+        </ul>
+      </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="mx-auto max-w-wrap px-5 py-14 border-t border-white/10">
+      <h2 class="text-2xl font-semibold">Experience</h2>
+      <p class="text-slate-400 mt-2"></p>
+      <div class="grid md:grid-cols-2 gap-5 mt-4">
+      <div class="bg-white/5 border border-borderc rounded-xl p-5">
+        <span class="text-secondary text-sm">July - August 2025</span>
+        <h3 class="font-semibold mt-1">Project - Based Virtual Internship : Big Data Analytics Kimia Farma x Rakamin Academy</h3>
+        <p class="text-sm text-slate-400">Kimia Farma</p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-slate-300 text-sm">
+      </div>
+      <div class="bg-white/5 border border-borderc rounded-xl p-5">
+        <span class="text-secondary text-sm">July - August 2024</span>
+        <h3 class="font-semibold mt-1">UI/UX and Front-End Developer</h3>
+        <p class="text-sm text-slate-400">Internship PT. PELNI Surabaya (Persero)</p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-slate-300 text-sm">
+        </ul>
+      </div>
+      <div class="bg-white/5 border border-borderc rounded-xl p-5">
+        <span class="text-secondary text-sm">August - December 2023</span>
+        <h3 class="font-semibold mt-1">MSIB Studi Independen Bacth 5 - UI/UX Designer</h3>
+        <p class="text-sm text-slate-400">Great Edu</p>
+        <ul class="list-disc list-inside mt-2 space-y-1 text-slate-300 text-sm">
+        </ul>
+      </div>
+    </section>
+
+    <!-- Certificates -->
+    <section class="mx-auto max-w-wrap px-5 py-14 border-t border-white/10">
+      <h2 class="text-2xl font-semibold">Certificates</h2>
+      <p class="text-slate-400 mt-2"></p>
+      <div class="grid md:grid-cols-3 gap-4 mt-4">
+      <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5">
+        <div class="text-secondary mb-2">Revo U</div>
+        <h3 class="font-semibold">Intro to Data Analytics</h3>
+        <p class="text-sm text-slate-400 mt-1">Issued July 2025</p>
+        <a href="https://drive.google.com/file/d/1foXy3U6_smQM29_vFhigJddfmd9w0Ahp/view?usp=sharing" class="inline-block mt-2 text-secondary hover:underline">View Certificate →</a>
+      </article>
+      <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5">
+        <div class="text-secondary mb-2">Rakamin Academy</div>
+        <h3 class="font-semibold">Big Data Analytics - Project Based Virtual Internship Program</h3>
+        <p class="text-sm text-slate-400 mt-1">Issued August 2025</p>
+        <a href="https://drive.google.com/file/d/1YEy4O-23Lt6iGq1chDwTkUtm_qhTOqeB/view?usp=sharing" class="inline-block mt-2 text-secondary hover:underline">View Certificate →</a>
+      </article>
+      <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5">
+        <div class="text-secondary mb-2">Great Edu</div>
+        <h3 class="font-semibold">UI/UX Bootcamp</h3>
+        <p class="text-sm text-slate-400 mt-1">Issued December 2023</p>
+        <a href="https://drive.google.com/file/d/1wVTcDjhTvY_cgLhYcXh-q3kaJhZGr2v0/view?usp=sharing" class="inline-block mt-2 text-secondary hover:underline">View Certificate →</a>
+      </article>
+      <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5">
+        <div class="text-secondary mb-2">BNSP</div>
+        <h3 class="font-semibold">Junior Web Programmer</h3>
+        <p class="text-sm text-slate-400 mt-1">Pending Issuance</p>
+        <a href="#" class="inline-block mt-2 text-secondary hover:underline">View Certificate →</a>
+      </article>
+      </div>
+    </section>
+
+    <!-- About -->
+    <!-- About -->
+<section id="about" class="mx-auto max-w-wrap px-5 py-14 border-t border-white/10">
+  <h2 class="text-2xl font-semibold">Skill and Tools</h2>
+  <p class="text-slate-400 mt-2 max-w-prose"></p>
+  
+  <!-- Grid Soft & Hard Skill -->
+  <div class="grid md:grid-cols-2 gap-5 mt-4">
+    <div class="bg-white/5 border border-borderc rounded-xl p-5">
+      <h3 class="font-semibold">Soft Skill</h3>
+      <ul class="list-disc list-inside mt-2 space-y-1 text-slate-300">
+        <li>Analytical Skill</li>
+        <li>Critical Thinking</li>
+        <li>Teamwork</li>
+      </ul>
+    </div>
+    <div class="bg-white/5 border border-borderc rounded-xl p-5">
+      <h3 class="font-semibold">Hard Skill</h3>
+      <ul class="list-disc list-inside mt-2 space-y-1 text-slate-300">
+        <li>Python</li>
+        <li>SQL & Google Big Query</li>
+        <li>Visualization Tools Looker Studio & Tableau</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Icon Tools di Tengah -->
+  <div class="flex flex-wrap justify-center gap-6 mt-8 text-5xl">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg" class="w-12 h-12" alt="Python Logo" />
+    <i class="devicon-googlecloud-plain colored" title="Google Big Query"></i>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" class="w-12 h-12" alt="Figma Logo" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" class="w-12 h-12" alt="Flask Logo" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original-wordmark.svg" class="w-12 h-12" alt="NumPy Logo" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original-wordmark.svg" class="w-12 h-12" alt="Pandas Logo" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg" class="w-12 h-12" alt="Visual Studio Logo" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" class="w-12 h-12" alt="MySQL Logo" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" class="w-12 h-12" alt="Jupyter Logo" />
+          </div>
+</section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="mx-auto max-w-wrap px-5 py-14 border-t border-white/10">
+      <h2 class="text-2xl font-semibold">Projects</h2>
+      <p class="text-slate-400 mt-2">A few things I’ve worked on. Replace the placeholders with your real projects, repos, or case studies.</p>
+      <div class="grid md:grid-cols-3 gap-4 mt-4">
+        <!-- Card 1 -->
+        <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5 hover:shadow-xl hover:-translate-y-0.5 transition">
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Undergraduate Thesis</span>
+            <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Python</span>
+            <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Forecasting</span>
+            <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Prophet</span>
+            <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">XGBoost</span>
+            <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Random Search</span>
+          </div>
+          <h3 class="text-lg font-semibold mt-2">Online Game Top UP Forecast using Prophet & XGBoost.</h3>
+          <p class="text-slate-300 text-sm mt-1">Built a daily sales forecasting system for game vouchers at PT Athena using a hybrid Prophet + XGBoost approach—Prophet for trend/seasonality, XGBoost on residuals with calendar, promo, and payment-share features (QRIS, BRI VA). Applied hyperparameter tuning via random search and deployed as a Flask web app for real-time forecasts. Outperformed single models with MAPE 1.77%, MAE 0.0361 (scaled), RMSE 0.0797 (scaled), enabling data-driven inventory and promotion decisions.</p>
+          <a href="#" class="inline-block mt-2 text-secondary hover:underline">Case study →</a>
+        </article>
+        <!-- Card 2 -->
+        <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5 hover:shadow-xl hover:-translate-y-0.5 transition">
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Google Big Query</span>
+            <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Dashboards</span>
+            <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Looker Studio</span>
+          </div>
+          <h3 class="text-lg font-semibold mt-2">Kimia Farma Performance Dashboard 2020-2023</h3>
+          <p class="text-slate-300 text-sm mt-1">End‑to‑end funnel dashboard highlighting conversion drop‑offs and actionable product insights.</p>
+          <a href="https://lookerstudio.google.com/u/0/reporting/eca0e03f-06c1-4d89-9816-0e53c1936f58/page/VgD" class="inline-block mt-2 text-secondary hover:underline">Live demo →</a>
+        </article>
+        <!-- Card 3 -->
+        <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5 hover:shadow-xl hover:-translate-y-0.5 transition">
+          <div class="flex flex-wrap gap-2 text-xs">
+            <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Excel</span>
+            <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Looker Studio</span>
+          </div>
+          <h3 class="text-lg font-semibold mt-2">Mobile Legends Topup Dashboard</h3>
+          <p class="text-slate-300 text-sm mt-1">This dashboard presents a detailed view of Mobile Legend top-up transactions within the jokibyathena.com platform. It tracks and visualizes metrics such as total transactions, transaction frequency over time, and top-selling denominations. Filters for date range, payment method, and region allow for flexible exploration of player purchasing patterns. The dashboard is designed for quick insight into user activity trends and identification of the most popular top-up options, enabling more informed operational and marketing decisions.</p>
+          <a href="https://lookerstudio.google.com/reporting/6059507e-ff0c-4b85-ae44-8ff64d7bd9a0" class="inline-block mt-2 text-secondary hover:underline">Dashboard Link →</a>
+        </article>
+      <!-- Card 4 -->
+      <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5 hover:shadow-xl hover:-translate-y-0.5 transition">
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Python</span>
+          <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Google Colab</span>
+          <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Web Scraping</span>
+        </div>
+        <h3 class="text-lg font-semibold mt-2">A Lexicon-Based Sentiment Analysis of YouTube Comments on the Merah Putih One for All Animation</h3>
+        <p class="text-slate-300 text-sm mt-1">This project conducted a sentiment analysis on the public reception of the 'Merah Putih: One for All' animation, specifically focusing on commentary from YouTube. Utilizing a lexicon-based approach, the study aimed to quantify the audience's reaction by categorizing comments into positive, negative, and neutral sentiments. The findings reveal that the animation was met with overwhelmingly negative feedback, indicating it has become a source of significant public criticism and anger among Indonesian netizens. The results from the analysis starkly illustrate the animation's poor reception. The final sentiment distribution is as follows Negative 571 comments, Neutral 326 comments,and Positive 11 comments.</p>
+        <a href="https://github.com/Kznrifky/oneforallaentimentanalysis" class="inline-block mt-2 text-secondary hover:underline">Github Project →</a>
+      </article>
+      <!-- Card 5 -->
+      <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5 hover:shadow-xl hover:-translate-y-0.5 transition">
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">SQL</span>
+          <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Data Analysis</span>
+        </div>
+        <h3 class="text-lg font-semibold mt-2">Sales Data Analysis</h3>
+        <p class="text-slate-300 text-sm mt-1">Analyzed sales data to identify trends and provide business insights.</p>
+        <a href="#" class="inline-block mt-2 text-secondary hover:underline">View Analysis →</a>
+      </article>
+      <!-- Card 6 -->
+      <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5 hover:shadow-xl hover:-translate-y-0.5 transition">
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Unity</span>
+          <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">C#</span>
+          <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">C++</span>
+        </div>
+        <h3 class="text-lg font-semibold mt-2">2D Educational Game Hotel Yamato Incident</h3>
+        <p class="text-slate-300 text-sm mt-1">This project involved the end-to-end development of a 2D educational game, managed using an Agile SCRUM methodology. The process was structured into focused sprints, ensuring a high-quality and iterative workflow that covered design, development, testing, and evaluation.The final game challenges players to navigate three distinct levels using core mechanics like jumping and shooting. To create a more engaging experience, a dynamic combat system was implemented, adding a layer of strategy through health and damage mechanics for both the player and enemies..</p>
+        <a href="http://ejournal.upnjatim.ac.id/index.php/scan/article/view/4732" class="inline-block mt-2 text-secondary hover:underline">View Journal →</a>
+      </article>
+          <!-- Card 7 -->
+          <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5 hover:shadow-xl hover:-translate-y-0.5 transition">
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Gemini AI</span>
+              <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Python</span>
+              <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Streamlit</span>
+            </div>
+            <h3 class="text-lg font-semibold mt-2">Interactive Chatbot Powered by Gemini AI</h3>
+            <p class="text-slate-300 text-sm mt-1">This project is an interactive chatbot application built with Streamlit and powered by Google Gemini AI. The application features a clean user interface where users can input text to engage in a direct, real-time conversation with the Gemini model. It serves as a practical demonstration of integrating a powerful large language model into a custom and user-friendly web application.</p>
+            <a href="https://chatbothacktiv-e45tjs89xy9pbw8xa4sqnc.streamlit.app/" class="inline-block mt-2 text-secondary hover:underline">View Chatbot →</a>
+          </article>
+
+          <!-- Card 8 -->
+          <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5 hover:shadow-xl hover:-translate-y-0.5 transition">
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">UI/UX</span>
+              <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Figma</span>
+              <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Mobile Prototype</span>
+            </div>
+            <h3 class="text-lg font-semibold mt-2">UI/UX Case Study Re-Trash, Mobile App for Waste Recycling</h3>
+            <p class="text-slate-300 text-sm mt-1">Created an interactive Tableau dashboard analyzing retail sales performance across multiple regions and product categories.</p>
+            <a href="#" class="inline-block mt-2 text-secondary hover:underline">View Dashboard →</a>
+          </article>
+
+          <!-- Card 9 -->
+          <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5 hover:shadow-xl hover:-translate-y-0.5 transition">
+            <div class="flex flex-wrap gap-2 text-xs">
+              <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">UI/UX</span>
+              <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Figma</span>
+              <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Mobile Prototype</span>
+            </div>
+            <h3 class="text-lg font-semibold mt-2">UI/UX Case Study Vessel Certificate Management System for PT. PELNI Surabaya</h3>
+            <p class="text-slate-300 text-sm mt-1">Built a sentiment analysis tool to analyze customer feedback from social media platforms using Natural Language Processing techniques.</p>
+            <a href="#" class="inline-block mt-2 text-secondary hover:underline">View Project →</a>
+          </article>
+          </div>
+    </section>
+    
+    <!-- Contact -->
+    <section id="contact" class="mx-auto max-w-wrap px-5 py-14 border-t border-white/10">
+      <h2 class="text-2xl font-semibold">Contact</h2>
+      <p class="text-slate-400 mt-2">Open to collaborations, freelance work, and interesting data problems.</p>
+
+      <div class="grid md:grid-cols-2 gap-5 mt-4">
+        <!-- Form -->
+        <div class="bg-white/5 border border-borderc rounded-xl p-5">
+          <h3 class="font-semibold">Message</h3>
+          <form onsubmit="return handleSubmit(event)" class="mt-2 space-y-3">
+            <label class="sr-only" for="name">Name</label>
+            <input id="name" class="w-full rounded-xl border border-borderc bg-white/5 px-4 py-3 outline-none focus:ring-4 focus:ring-secondary/40" placeholder="Your name" required />
+            <label class="sr-only" for="message">Message</label>
+            <textarea id="message" class="w-full rounded-xl border border-borderc bg-white/5 px-4 py-3 outline-none focus:ring-4 focus:ring-secondary/40 min-h-[120px]" placeholder="Say hello…" required></textarea>
+            <button class="inline-flex justify-center rounded-xl bg-primary text-white font-semibold px-4 py-3 shadow-soft" type="submit">Send Email</button>
+          </form>
+        </div>
+
+        <!-- Direct + Socials -->
+        <div class="bg-white/5 border border-borderc rounded-xl p-5">
+          <h3 class="font-semibold">Direct</h3>
+          <p class="mt-2"><strong>Email:</strong> <a class="text-secondary hover:underline" href="mailto:kznrifkyyy@gmail.com">kznrifkyyy@gmail.com</a></p>
+          <p class="mt-1"><strong>LinkedIn:</strong> <a class="text-secondary hover:underline" href="https://linkedin.com/in/kznrifky" target="_blank" rel="noopener">linkedin.com/in/kznrifky</a></p>
+          <p class="mt-1"><strong>Instagram:</strong> <a class="text-secondary hover:underline" href="https://instagram.com/kznrifky/" target="_blank" rel="noopener">instagram.com/kznrifky</a></p>
+          <div class="flex flex-wrap items-center gap-3 mt-4">
+            <a href="mailto:kznrifkyyy@gmail.com" class="inline-flex items-center gap-2 rounded-xl border border-borderc bg-white/5 px-4 py-2">
+              <!-- Mail icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M1.5 6.75A2.25 2.25 0 013.75 4.5h16.5a2.25 2.25 0 012.25 2.25v10.5A2.25 2.25 0 0120.25 19.5H3.75a2.25 2.25 0 01-2.25-2.25V6.75zm2.404-.116A.75.75 0 003.75 7.5l7.5 4.5 7.5-4.5a.75.75 0 10-.758-1.29L11.25 10.56 3.904 6.634z"/></svg>
+              Email me</a>
+            <a href="https://linkedin.com/in/kznrifky" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl bg-primary text-white px-4 py-2">
+              <!-- LinkedIn icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V24h-4V8zm7.5 0h3.8v2.2h.05c.53-1 1.83-2.2 3.76-2.2 4.02 0 4.77 2.65 4.77 6.1V24h-4v-7.1c0-1.7-.03-3.9-2.38-3.9-2.38 0-2.75 1.86-2.75 3.78V24h-4V8z"/></svg>
+              LinkedIn</a>
+            <a href="https://instagram.com/kznrifky" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-xl bg-secondary text-slate-900 px-4 py-2">
+              <!-- Instagram icon -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 2c1.66 0 3 1.34 3 3v10c0 1.66-1.34 3-3 3H7c-1.66 0-3-1.34-3-3V7c0-1.66 1.34-3 3-3h10zm-5 3a5 5 0 100 10 5 5 0 000-10zm0 2.2a2.8 2.8 0 110 5.6 2.8 2.8 0 010-5.6zM17.8 6.2a1 1 0 100 2 1 1 0 000-2z"/></svg>
+              Instagram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-white/10">
+    <div class="mx-auto max-w-wrap px-5 py-6 text-slate-400">© <span id="year"></span> Portofolio Rifky.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('[Portfolio] Message from ' + name);
+      const body = encodeURIComponent(message + '\n\n— Sent from Rifky portfolio');
+      window.location.href = `mailto:kznrifkyyy@gmail.com?subject=${subject}&body=${body}`;
+      return false;
+    }
+  </script>
+</body>
+</html>
