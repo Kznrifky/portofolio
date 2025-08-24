@@ -58,7 +58,9 @@
       </div>
       <nav aria-label="Primary">
         <ul class="flex gap-3 text-sm">
-          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#about">About</a></li>
+          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#About">About</a></li>
+          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#experience">Experience</a></li>
+          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#Skills">Skills</a></li>
           <li><a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#projects">Projects</a></li>
           <li><a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#contact">Contact</a></li>
         </ul>
@@ -68,6 +70,7 @@
 
   <main>
     <!-- Hero -->
+     <section id="About" class="mx-auto max-w-wrap px-5 py-14 border-t border-white/10"></section>
     <section class="mx-auto max-w-wrap px-5 grid md:grid-cols-[1.15fr_.85fr] gap-7 items-center py-16">
       <div>
         <span class="inline-flex items-center gap-2 text-secondary border border-borderc rounded-full px-3 py-1 bg-secondary/10">
@@ -113,7 +116,7 @@
     </section>
 
     <!-- Experience -->
-    <section class="mx-auto max-w-wrap px-5 py-14 border-t border-white/10">
+    <section id="experience" class="mx-auto max-w-wrap px-5 py-14 border-t border-white/10">
       <h2 class="text-2xl font-semibold">Experience</h2>
       <p class="text-slate-400 mt-2"></p>
       <div class="grid md:grid-cols-2 gap-5 mt-4">
@@ -133,7 +136,7 @@
       <div class="bg-white/5 border border-borderc rounded-xl p-5">
         <span class="text-secondary text-sm">August - December 2023</span>
         <h3 class="font-semibold mt-1">MSIB Studi Independen Bacth 5 - UI/UX Designer</h3>
-        <p class="text-sm text-slate-400">Great Edu</p>
+        <p class="text-sm text-slate-400">MSIB Kampus Merdeka Great Edu</p>
         <ul class="list-disc list-inside mt-2 space-y-1 text-slate-300 text-sm">
         </ul>
       </div>
@@ -166,14 +169,12 @@
         <div class="text-secondary mb-2">BNSP</div>
         <h3 class="font-semibold">Junior Web Programmer</h3>
         <p class="text-sm text-slate-400 mt-1">Pending Issuance</p>
-        <a href="#" class="inline-block mt-2 text-secondary hover:underline">View Certificate →</a>
       </article>
       </div>
     </section>
 
-    <!-- About -->
-    <!-- About -->
-<section id="about" class="mx-auto max-w-wrap px-5 py-14 border-t border-white/10">
+    <!-- Skill -->
+<section id="Skills" class="mx-auto max-w-wrap px-5 py-14 border-t border-white/10">
   <h2 class="text-2xl font-semibold">Skill and Tools</h2>
   <p class="text-slate-400 mt-2 max-w-prose"></p>
   
@@ -228,7 +229,7 @@
             <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Random Search</span>
           </div>
           <h3 class="text-lg font-semibold mt-2">Online Game Top UP Forecast using Prophet & XGBoost.</h3>
-          <p class="text-slate-300 text-sm mt-1">Built a daily sales forecasting system for game vouchers at PT Athena using a hybrid Prophet + XGBoost approach—Prophet for trend/seasonality, XGBoost on residuals with calendar, promo, and payment-share features (QRIS, BRI VA). Applied hyperparameter tuning via random search and deployed as a Flask web app for real-time forecasts. Outperformed single models with MAPE 1.77%, MAE 0.0361 (scaled), RMSE 0.0797 (scaled), enabling data-driven inventory and promotion decisions.</p>
+          <p class="text-slate-300 text-sm mt-1">Built a real-time sales forecasting using Prophet + XGBoost with 1.77% MAPE for PT Athena</p>
           <a href="#" class="inline-block mt-2 text-secondary hover:underline">Case study →</a>
         </article>
         <!-- Card 2 -->
@@ -239,8 +240,10 @@
             <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Looker Studio</span>
           </div>
           <h3 class="text-lg font-semibold mt-2">Kimia Farma Performance Dashboard 2020-2023</h3>
-          <p class="text-slate-300 text-sm mt-1">End‑to‑end funnel dashboard highlighting conversion drop‑offs and actionable product insights.</p>
-          <a href="https://lookerstudio.google.com/u/0/reporting/eca0e03f-06c1-4d89-9816-0e53c1936f58/page/VgD" class="inline-block mt-2 text-secondary hover:underline">Live demo →</a>
+          <p class="text-slate-300 text-sm mt-1">Analyzed 4 years of Kimia Farma transaction data 2020–2023 to deliver business insights on sales, profit, and customer behavior through EDA, RFM segmentation, and interactive dashboards.</p>
+          <a href="https://drive.google.com/file/d/1n-Y6Fsvky0Nz-v_FBAtaTB9pB5LJvxC5/view?usp=sharing" class="inline-block mt-2 text-secondary hover:underline">Presentation →</a>
+          <div class=></div> 
+          <a href="https://lookerstudio.google.com/reporting/eca0e03f-06c1-4d89-9816-0e53c1936f58" class="inline-block mt-2 text-secondary hover:underline">Dashboard Link →</a>
         </article>
         <!-- Card 3 -->
         <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5 hover:shadow-xl hover:-translate-y-0.5 transition">
@@ -249,7 +252,7 @@
             <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Looker Studio</span>
           </div>
           <h3 class="text-lg font-semibold mt-2">Mobile Legends Topup Dashboard</h3>
-          <p class="text-slate-300 text-sm mt-1">This dashboard presents a detailed view of Mobile Legend top-up transactions within the jokibyathena.com platform. It tracks and visualizes metrics such as total transactions, transaction frequency over time, and top-selling denominations. Filters for date range, payment method, and region allow for flexible exploration of player purchasing patterns. The dashboard is designed for quick insight into user activity trends and identification of the most popular top-up options, enabling more informed operational and marketing decisions.</p>
+          <p class="text-slate-300 text-sm mt-1">Insights into Mobile Legends top-ups: trends, payments, and top-selling denominations</p>
           <a href="https://lookerstudio.google.com/reporting/6059507e-ff0c-4b85-ae44-8ff64d7bd9a0" class="inline-block mt-2 text-secondary hover:underline">Dashboard Link →</a>
         </article>
       <!-- Card 4 -->
@@ -260,7 +263,7 @@
           <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Web Scraping</span>
         </div>
         <h3 class="text-lg font-semibold mt-2">A Lexicon-Based Sentiment Analysis of YouTube Comments on the Merah Putih One for All Animation</h3>
-        <p class="text-slate-300 text-sm mt-1">This project conducted a sentiment analysis on the public reception of the 'Merah Putih: One for All' animation, specifically focusing on commentary from YouTube. Utilizing a lexicon-based approach, the study aimed to quantify the audience's reaction by categorizing comments into positive, negative, and neutral sentiments. The findings reveal that the animation was met with overwhelmingly negative feedback, indicating it has become a source of significant public criticism and anger among Indonesian netizens. The results from the analysis starkly illustrate the animation's poor reception. The final sentiment distribution is as follows Negative 571 comments, Neutral 326 comments,and Positive 11 comments.</p>
+        <p class="text-slate-300 text-sm mt-1">Sentiment analysis of Merah Putih animation reveals overwhelming negative audience response</p>
         <a href="https://github.com/Kznrifky/oneforallaentimentanalysis" class="inline-block mt-2 text-secondary hover:underline">Github Project →</a>
       </article>
       <!-- Card 5 -->
@@ -281,8 +284,8 @@
           <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">C++</span>
         </div>
         <h3 class="text-lg font-semibold mt-2">2D Educational Game Hotel Yamato Incident</h3>
-        <p class="text-slate-300 text-sm mt-1">This project involved the end-to-end development of a 2D educational game, managed using an Agile SCRUM methodology. The process was structured into focused sprints, ensuring a high-quality and iterative workflow that covered design, development, testing, and evaluation.The final game challenges players to navigate three distinct levels using core mechanics like jumping and shooting. To create a more engaging experience, a dynamic combat system was implemented, adding a layer of strategy through health and damage mechanics for both the player and enemies..</p>
-        <a href="http://ejournal.upnjatim.ac.id/index.php/scan/article/view/4732" class="inline-block mt-2 text-secondary hover:underline">View Journal →</a>
+        <p class="text-slate-300 text-sm mt-1">Developed a 2D educational game with Agile SCRUM, featuring strategic combat mechanics.</p>
+        <a href="https://drive.google.com/file/d/1gi_JnRuscwsfY7q42uiMcbUSUQFl1oPX/view?usp=sharing" class="inline-block mt-2 text-secondary hover:underline">View Journal →</a>
       </article>
           <!-- Card 7 -->
           <article class="bg-gradient-to-b from-[#0b1730] to-[#0a1731] border border-borderc rounded-2xl p-5 hover:shadow-xl hover:-translate-y-0.5 transition">
@@ -291,8 +294,8 @@
               <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Python</span>
               <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Streamlit</span>
             </div>
-            <h3 class="text-lg font-semibold mt-2">Interactive Chatbot Powered by Gemini AI</h3>
-            <p class="text-slate-300 text-sm mt-1">This project is an interactive chatbot application built with Streamlit and powered by Google Gemini AI. The application features a clean user interface where users can input text to engage in a direct, real-time conversation with the Gemini model. It serves as a practical demonstration of integrating a powerful large language model into a custom and user-friendly web application.</p>
+            <h3 class="text-lg font-semibold mt-2">Interactive Chatbot</h3>
+            <p class="text-slate-300 text-sm mt-1">Interactive Streamlit chatbot powered by Google Gemini AI for real-time conversations</p>
             <a href="https://chatbothacktiv-e45tjs89xy9pbw8xa4sqnc.streamlit.app/" class="inline-block mt-2 text-secondary hover:underline">View Chatbot →</a>
           </article>
 
@@ -304,8 +307,8 @@
               <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Mobile Prototype</span>
             </div>
             <h3 class="text-lg font-semibold mt-2">UI/UX Case Study Re-Trash, Mobile App for Waste Recycling</h3>
-            <p class="text-slate-300 text-sm mt-1">Created an interactive Tableau dashboard analyzing retail sales performance across multiple regions and product categories.</p>
-            <a href="#" class="inline-block mt-2 text-secondary hover:underline">View Dashboard →</a>
+            <p class="text-slate-300 text-sm mt-1">ReTrash: The caring solution for your daily waste problem.</p>
+            <a href="https://drive.google.com/file/d/1frRSB0MlaX1z7-_KkqcSGAIimJ7kwW1K/view?usp=sharing" class="inline-block mt-2 text-secondary hover:underline">View Project →</a>
           </article>
 
           <!-- Card 9 -->
@@ -316,8 +319,8 @@
               <span class="px-2 py-1 rounded-full bg-sky-400/10 border border-sky-400/40">Mobile Prototype</span>
             </div>
             <h3 class="text-lg font-semibold mt-2">UI/UX Case Study Vessel Certificate Management System for PT. PELNI Surabaya</h3>
-            <p class="text-slate-300 text-sm mt-1">Built a sentiment analysis tool to analyze customer feedback from social media platforms using Natural Language Processing techniques.</p>
-            <a href="#" class="inline-block mt-2 text-secondary hover:underline">View Project →</a>
+            <p class="text-slate-300 text-sm mt-1">Navigate your vessel certifications with ease through a user-focused interface designed for clarity.</p>
+            <a href="https://drive.google.com/file/d/1BzvatOqnYaoVO_ZqjLPh1I3zyfg-Bx1C/view?usp=sharing" class="inline-block mt-2 text-secondary hover:underline">View Project →</a>
           </article>
           </div>
     </section>
@@ -340,7 +343,7 @@
           </form>
         </div>
 
-        <!-- Direct + Socials -->
+        <!-- Direct + Socials --></nav>
         <div class="bg-white/5 border border-borderc rounded-xl p-5">
           <h3 class="font-semibold">Direct</h3>
           <p class="mt-2"><strong>Email:</strong> <a class="text-secondary hover:underline" href="mailto:kznrifkyyy@gmail.com">kznrifkyyy@gmail.com</a></p>
