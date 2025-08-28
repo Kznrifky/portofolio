@@ -32,6 +32,8 @@
   <style>
     body{font-family:Inter,ui-sans-serif,system-ui}
     .glass{background:rgba(11,16,34,.7);backdrop-filter:saturate(140%) blur(12px)}
+    /* optional: extra emphasis for active link (in addition to Tailwind toggles) */
+    .nav-active { text-decoration: none; }
   </style>
 </head>
 <body class="bg-gradient-to-b from-[#0b1220] to-[#0b1022] text-slate-100">
@@ -46,18 +48,17 @@
       <!-- Desktop nav -->
       <nav aria-label="Primary" class="hidden md:block">
         <ul class="flex gap-2 text-sm">
-          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#About">About</a></li>
-          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#experience">Experience</a></li>
-          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#Skills">Skills</a></li>
-          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#projects">Projects</a></li>
-          <li><a class="px-3 py-2 rounded-lg hover:bg-white/10" href="#contact">Contact</a></li>
+          <li><a class="nav-link px-3 py-2 rounded-lg hover:bg-white/10" href="#About">About</a></li>
+          <li><a class="nav-link px-3 py-2 rounded-lg hover:bg-white/10" href="#experience">Experience</a></li>
+          <li><a class="nav-link px-3 py-2 rounded-lg hover:bg-white/10" href="#Skills">Skills</a></li>
+          <li><a class="nav-link px-3 py-2 rounded-lg hover:bg-white/10" href="#projects">Projects</a></li>
+          <li><a class="nav-link px-3 py-2 rounded-lg hover:bg-white/10" href="#contact">Contact</a></li>
         </ul>
       </nav>
 
       <!-- Mobile hamburger -->
       <button id="navToggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg hover:bg-white/10"
               aria-label="Open menu" aria-expanded="false">
-        <!-- icon -->
         <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
     </div>
@@ -66,11 +67,11 @@
     <div id="mobileMenu" class="md:hidden hidden border-t border-white/10">
       <nav class="mx-auto max-w-wrap px-5 py-2">
         <ul class="flex flex-col text-sm">
-          <li><a class="block px-3 py-3 rounded-lg hover:bg-white/10" href="#About">About</a></li>
-          <li><a class="block px-3 py-3 rounded-lg hover:bg-white/10" href="#experience">Experience</a></li>
-          <li><a class="block px-3 py-3 rounded-lg hover:bg-white/10" href="#Skills">Skills</a></li>
-          <li><a class="block px-3 py-3 rounded-lg hover:bg-white/10" href="#projects">Projects</a></li>
-          <li><a class="block px-3 py-3 rounded-lg hover:bg-white/10" href="#contact">Contact</a></li>
+          <li><a class="nav-link block px-3 py-3 rounded-lg hover:bg-white/10" href="#About">About</a></li>
+          <li><a class="nav-link block px-3 py-3 rounded-lg hover:bg-white/10" href="#experience">Experience</a></li>
+          <li><a class="nav-link block px-3 py-3 rounded-lg hover:bg-white/10" href="#Skills">Skills</a></li>
+          <li><a class="nav-link block px-3 py-3 rounded-lg hover:bg-white/10" href="#projects">Projects</a></li>
+          <li><a class="nav-link block px-3 py-3 rounded-lg hover:bg-white/10" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -381,10 +382,37 @@
       const open = panel.classList.toggle('hidden') === false;
       btn.setAttribute('aria-expanded', String(open));
     });
-    // close menu after click
     panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       panel.classList.add('hidden'); btn.setAttribute('aria-expanded','false');
     }));
+
+    // ===== Active link on scroll =====
+    const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
+    const sectionIds = [...new Set(navLinks.map(a => a.getAttribute('href').slice(1)))];
+    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+
+    function setActive(id) {
+      navLinks.forEach(a => {
+        const match = a.getAttribute('href') === '#' + id;
+        a.classList.toggle('nav-active', match);
+        a.classList.toggle('bg-white/10', match);
+        a.classList.toggle('text-white', match);
+      });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) setActive(entry.target.id); });
+    }, { root: null, threshold: 0.6, rootMargin: '-64px 0px -30% 0px' });
+
+    sections.forEach(sec => observer.observe(sec));
+
+    window.addEventListener('load', () => {
+      const firstVisible = sections.find(s => {
+        const r = s.getBoundingClientRect();
+        return r.top < window.innerHeight * 0.5 && r.bottom > 0;
+      });
+      setActive((firstVisible || document.getElementById('About')).id);
+    });
   </script>
 </body>
 </html>
