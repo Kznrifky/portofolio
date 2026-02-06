@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glass Blue Portfolio</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,sans-serif}
+html{scroll-behavior:smooth}
+
+body{
+  background:linear-gradient(135deg,#0f4c81,#1b6ca8,#3fa9f5);
+  color:#fff;
+}
+
+/* ========== NAVBAR ========== */
+header{
+  position:sticky;top:0;z-index:999;
+  backdrop-filter:blur(16px);
+  background:rgba(255,255,255,.15);
+  border-bottom:1px solid rgba(255,255,255,.25);
+}
+nav{
+  max-width:1200px;margin:auto;
+  padding:16px 28px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+nav ul{list-style:none;display:flex;gap:16px}
+nav a{
+  padding:8px 14px;border-radius:12px;
+  color:#fff;text-decoration:none;
+}
+nav a:hover{background:rgba(255,255,255,.25)}
+
+/* ========== SECTION ========== */
+section{
+  max-width:1200px;
+  margin:70px auto;
+  padding:32px 28px;
+}
+.glass{
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(20px);
+  border-radius:24px;
+  padding:36px;
+  border:1px solid rgba(255,255,255,.3);
+  box-shadow:0 25px 50px rgba(0,0,0,.25);
+}
+h2{font-size:32px;margin-bottom:20px}
+
+/* ========== REVEAL ========== */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:.8s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* ========== INTRO ========== */
+.intro{
+  display:grid;
+  grid-template-columns:1fr 260px;
+  gap:36px;
+  align-items:center;
+}
+
+/* Padding antar Paragraf */
+p{
+  margin-bottom:18px;
+  line-height:1.6;
+}
+
+
+.intro img{
+  width:100%;
+  border-radius:18px;
+  border:2px solid rgba(255,255,255,.4);
+}
+
+/* CV BUTTON */
+.cv-btn{
+  display:inline-block;margin-top:20px;
+  padding:14px 26px;border-radius:16px;
+  background:linear-gradient(135deg,#ffffff55,#ffffff22);
+  border:1px solid rgba(255,255,255,.4);
+  color:#fff;font-weight:700;
+  text-decoration:none;
+  animation:pulse 2.5s infinite;
+}
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(255,255,255,.35)}
+  70%{box-shadow:0 0 0 12px rgba(255,255,255,0)}
+  100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}
+}
+
+/* ========== GRID & CARD ========== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+/* Certification khusus 2 kolom */
+.cert-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.card{
+  background:rgba(255,255,255,.18);
+  border-radius:18px;
+  padding:20px;
+  border:1px solid rgba(255,255,255,.25);
+  transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    background .35s ease;
+}
+
+/* 🔥 HOVER EFFECT */
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 35px 70px rgba(0,0,0,.35);
+  background:rgba(255,255,255,.22);
+}
+
+/* ========== EXPERIENCE ========== */
+.experience{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
+}
+.exp-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:4px;
+}
+.exp-period{
+  font-size:13px;
+  padding:4px 12px;
+  border-radius:14px;
+  background:rgba(255,255,255,.25);
+}
+.exp-role{font-weight:600}
+.exp-company{
+  font-size:14px;
+  opacity:.9;
+  margin-bottom:8px;
+}
+.exp-list{padding-left:18px}
+
+/* ========== SKILLS ========== */
+.skill-card{display:flex;flex-direction:column;gap:12px}
+.skill-header{
+  display:flex;justify-content:space-between;align-items:center;
+}
+.skill-left{display:flex;align-items:center;gap:10px}
+.skill-left img{width:36px}
+.skill-bar{
+  width:100%;height:10px;
+  background:rgba(255,255,255,.25);
+  border-radius:999px;overflow:hidden;
+}
+.skill-progress{
+  height:100%;width:0;
+  background:linear-gradient(90deg,#9fd3ff,#ffffff);
+  transition:width 1s ease;
+}
+
+/* ========== PROJECT & CERT ========== */
+.image-box{
+  background:rgba(255,255,255,.22);
+  border-radius:14px;
+  padding:12px;
+}
+.image-box img{
+  width:100%;
+  border-radius:10px;
+}
+.card h4{margin-top:8px}
+
+/* ===== PROJECT IMAGE BOX FIX ===== */
+#projects .image-box{
+  height: 120px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+#projects .image-box img{
+  max-width:50%;
+  height:auto;
+}
+
+#projects .card h4{
+  margin:8px 0 8px;
+}
+
+/* ===== Khusus CERTIFICATION ===== */
+#certification .image-box{
+  height:160px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:12px;
+  overflow:hidden;
+}
+
+#certification .image-box img{
+  max-width:50%;
+  height:auto;
+}
+
+/* Button */
+.action{
+  display:block;
+  margin-top:12px;
+  padding:12px;
+  border-radius:14px;
+  background:rgba(255,255,255,.25);
+  text-align:center;
+  text-decoration:none;
+  color:#fff;
+  font-weight:600;
+}
+
+.action:hover{
+  background:linear-gradient(135deg,#3fa9f5,#1b6ca8);
+  transform:translateY(-2px);
+  box-shadow:0 12px 24px rgba(63,169,245,.35);
+}
+
+/* ========== PROJECTS & CERTIFICATIONS CARD FIX ========== */
+#projects .card,
+#certification .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#projects .image-box,
+#certification .image-box {
+  flex-shrink: 0;
+}
+
+#projects .card h4{
+  margin-bottom: 2px; /* jarak antara judul & deskripsi */
+  min-height: 65px; /* 🔥 KUNCI: slot judul sama tingginya */
+  display: flex;
+  align-items: flex-start;
+}
+
+#projects .card p {
+  margin: 0 0 16px 0; /* jarak antara deskripsi & button */
+  font-size: 14px;
+  line-height: 1.6;
+  opacity: .95;
+  min-height: 72px; /* slot deskripsi tetap sama */
+  flex-shrink: 0;
+}
+
+#projects .action,
+#certification .action {
+  margin-top: auto; /* button selalu di bawah */
+  flex-shrink: 0;
+}
+
+/* Padding khusus untuk certification (tidak ada deskripsi) */
+#certification .card h4 {
+  margin-bottom: 2px; /* jarak antara judul & deskripsi */
+  min-height: 30px; /* 🔥 KUNCI: slot judul sama tingginya */
+  display: flex;
+  align-items: flex-start;
+}
+/* ========== CONTACT ========== */
+.contact-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:18px;
+}
+.contact-card{
+  padding:18px;
+  border-radius:18px;
+  background:rgba(255,255,255,.2);
+  border:1px solid rgba(255,255,255,.35);
+
+  /* tambahan */
+  display:block;
+  text-decoration:none;
+  color:#fff;
+  transition:.3s ease;
+}
+
+.contact-card:hover{
+  transform:translateY(-6px) scale(1.03);
+  background:rgba(255,255,255,.3);
+  box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .intro{grid-template-columns:1fr}
+  .experience{grid-template-columns:1fr}
+  .cert-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+  <h1>Portfolio</h1>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certification">Certification</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
+<div class="glass intro">
+  <div>
+    <h2>Hello, I'm Muhammad Rifky 👋</h2>
+<p>
+  A Data Analyst with experience turning complex data into clear, actionable insights.
+  Skilled in SQL, Python, and Power BI for data exploration, dashboarding, and performance monitoring across business and analytical use cases.
+</p>
+
+<p>
+  Google Data Analytics Professional Certificate holder with a strong foundation in data-driven decision making.
+</p>
+    <a class="cv-btn" href="https://drive.google.com/file/d/1_eHBeA1zq6EyKVZpO2iHctsmF1zVCAV7/view?usp=sharing">📄 Download CV</a>
+  </div>
+  <img src="img/rifky.JPG">
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="reveal">
+<div class="glass">
+<h2>Experience</h2>
+<div class="experience">
+
+<div class="card">
+  <div class="exp-top"><div class="exp-role">Data Analyst Intern</div><span class="exp-period">Nov 25 - Present</span></div>
+  <div class="exp-company">PT Bank Rakyat Indonesia TBK</div>
+  <ul class="exp-list"><li>Developed a Power Bi based Credit Risk Analysis System (CRAS) using a dataset of ~3 million loan records to monitor key credit quality indicators, including Outstanding balance, NPL, LAR, and portfolio trends.</li></ul>
+  <ul class="exp-list"><li>Performed large-scale data cleaning, transformation, and data modeling using Power Query, and created DAX measures to calculate credit risk ratios and performance indicators across loan products and organizational levels.</li></ul>
+  <ul class="exp-list"><li>Designed interactive credit risk dashboards at National, Regional Office, Branch Office, and Sub-Branch Office levels to support year-end credit risk reporting, end-to-end portfolio monitoring, and management decision-making.</li></ul>
+</div>
+
+
+<div class="card">
+  <div class="exp-top"><div class="exp-role">Big Data Analytics</div><span class="exp-period">Jul 25 - Aug 25</span></div>
+  <div class="exp-company">Project Based Internship Rakamin × Kimia Farma</div>
+  <ul class="exp-list"><li>Analyzed 4 years 2020–2023 of transaction data to identify trends in sales, profit, and customer behavior.</li></ul>
+  <ul class="exp-list"><li>Applied RFM segmentation to classify customers by loyalty and spending, revealing the top 20% contributing 60% of revenue.</li></ul>
+  <ul class="exp-list"><li>Built a Google Data Studio dashboard visualizing KPIs, seasonal trends, and regional performance to support marketing and inventory decisions.</li></ul>
+</div>
+
+<div class="card">
+  <div class="exp-top"><div class="exp-role">UI/UX Design Intern</div><span class="exp-period">Jul 24 - Aug 24</span></div>
+  <div class="exp-company">PT Pelayaran Nasional Surabaya (PELNI)</div>
+  <ul class="exp-list"><li>Conducted a usability case study for the Vessel Certificate Management System to improve workflow clarity and accessibility.</li></ul>
+  <ul class="exp-list"><li>Simplified navigation and improved information hierarchy, enhancing operational efficiency and user experience</li></ul>
+</div>
+
+<div class="card">
+  <div class="exp-top"><div class="exp-role">Great Edu UI/UX Design</div><span class="exp-period">Aug 23 - Dec 23</span></div>
+  <div class="exp-company">Independent Study Program (MSIB) Bacth 5</div>
+  <ul class="exp-list"><li>Learned and applied user research and design principles to enhance product usability and user experience.</li></ul>
+  <ul class="exp-list"><li>Final Project – ReTrash developed a mobile app prototype to encourage smarter waste management and recycling habits. Translated user insights into design improvements through research, usability testing, and continuous iteration</li></ul>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="reveal">
+<div class="glass">
+<h2>Skills</h2>
+<div class="grid">
+
+<div class="card skill-card">
+  <div class="skill-header">
+    <div class="skill-left"><img src="icons/python.png">Python</div>
+    <div>75%</div>
+  </div>
+  <div class="skill-bar"><div class="skill-progress" data-level="75%"></div></div>
+</div>
+
+<div class="card skill-card">
+  <div class="skill-header">
+    <div class="skill-left"><img src="icons/sql.png">SQL</div>
+    <div>85%</div>
+  </div>
+  <div class="skill-bar"><div class="skill-progress" data-level="85%"></div></div>
+</div>
+
+<div class="card skill-card">
+  <div class="skill-header">
+    <div class="skill-left"><img src="icons/postgre.png">PostgreSQL</div>
+    <div>80%</div>
+  </div>
+  <div class="skill-bar"><div class="skill-progress" data-level="80%"></div></div>
+</div>
+
+<div class="card skill-card">
+  <div class="skill-header">
+    <div class="skill-left"><img src="icons/vsco.png">VS Code</div>
+    <div>80%</div>
+  </div>
+  <div class="skill-bar"><div class="skill-progress" data-level="80%"></div></div>
+</div>
+
+<div class="card skill-card">
+  <div class="skill-header">
+    <div class="skill-left"><img src="icons/googlesheets.png">Google Sheets</div>
+    <div>85%</div>
+  </div>
+  <div class="skill-bar"><div class="skill-progress" data-level="85%"></div></div>
+</div>
+
+<div class="card skill-card">
+  <div class="skill-header">
+    <div class="skill-left"><img src="icons/excel.png">Microsoft Excel</div>
+    <div>80%</div>
+  </div>
+  <div class="skill-bar"><div class="skill-progress" data-level="80%"></div></div>
+</div>
+
+<div class="card skill-card">
+  <div class="skill-header">
+    <div class="skill-left"><img src="icons/powerbi.png">Power BI</div>
+    <div>95%</div>
+  </div>
+  <div class="skill-bar"><div class="skill-progress" data-level="95%"></div></div>
+</div>
+
+<div class="card skill-card">
+  <div class="skill-header">
+    <div class="skill-left"><img src="icons/tableau.png">Tableau</div>
+    <div>85%</div>
+  </div>
+  <div class="skill-bar"><div class="skill-progress" data-level="85%"></div></div>
+</div>
+
+<div class="card skill-card">
+  <div class="skill-header">
+    <div class="skill-left"><img src="icons/datastudio.png">Google Data Studio</div>
+    <div>80%</div>
+  </div>
+  <div class="skill-bar"><div class="skill-progress" data-level="85%"></div></div>
+</div>
+
+<div class="card skill-card">
+  <div class="skill-header">
+    <div class="skill-left"><img src="icons/figma.png">Figma</div>
+    <div>85%</div>
+  </div>
+  <div class="skill-bar"><div class="skill-progress" data-level="85%"></div></div>
+</div>
+
+<div class="card skill-card">
+  <div class="skill-header">
+    <div class="skill-left"><img src="icons/canva.png">Canva</div>
+    <div>85%</div>
+  </div>
+  <div class="skill-bar"><div class="skill-progress" data-level="85%"></div></div>
+</div>
+
+<div class="card skill-card">
+  <div class="skill-header">
+    <div class="skill-left"><img src="icons/github.png">GitHub</div>
+    <div>70%</div>
+  </div>
+  <div class="skill-bar"><div class="skill-progress" data-level="70%"></div></div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CERTIFICATION -->
+<section id="certification" class="reveal">
+<div class="glass">
+<h2>Certification</h2>
+<div class="cert-grid">
+
+<div class="card">
+  <div class="image-box"><img src="project/certi.png"></div>
+  <h4>Google Data Analytics Professional</h4>
+  <p>Issued by Google via Coursera</p>
+  <a class="action" href="https://www.credly.com/badges/bdb7df5f-0634-4074-9e8b-af8db9deb79f/linked_in_profile">View Certificate</a>
+</div>
+
+<div class="card">
+  <div class="image-box"><img src="project/certi.png"></div>
+  <h4>SQL for Data Analysis</h4>
+  <p>Issued by Simplilearn</p>
+  <a class="action" href="https://www.simplilearn.com/skillup-certificate-landing?token=eyJjb3Vyc2VfaWQiOiI0ODU5IiwiY2VydGlmaWNhdGVfdXJsIjoiaHR0cHM6XC9cL2NlcnRpZmljYXRlcy5zaW1wbGljZG4ubmV0XC9zaGFyZVwvOTgwNzk5OF8xMDA4MzE1N18xNzcwMzA1NjQzNjM1LnBuZyIsInVzZXJuYW1lIjoiTXVoYW1tYWQgUmlma3kifQ%3D%3D&utm_source=shared-certificate&utm_medium=lms&utm_campaign=shared-certificate-promotion&referrer=https%3A%2F%2Flms.simplilearn.com%2Fcourses%2F7823%2FSQL-for-Data-Analysis%2Fcertificate%2Fdownload-skillup&%24web_only=true&_branch_match_id=1474660503098736995&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXL87MLcjJ1EssKNDLyczL1k%2FVD3I2sPQyCQwrM0iyrytKTUstKsrMS49PKsovL04tsvUBqkpN8cwDAM15CPNBAAAA">View Certificate</a>
+</div>
+
+<div class="card">
+  <div class="image-box"><img src="project/certi.png"></div>
+  <h4>Big Data Analytics - Project Based Virtual Internship Program</h4>
+  <p>Issued by Rakamin Academy</p>
+  <a class="action" href="https://drive.google.com/file/d/1YEy4O-23Lt6iGq1chDwTkUtm_qhTOqeB/view">View Certificate</a>
+</div>
+
+<div class="card">
+  <div class="image-box"><img src="project/certi.png"></div>
+  <h4>Data Science Bootcamp</h4>
+  <p>Issued by Digica Academy</p>
+  <a class="action" href="https://drive.google.com/file/d/1ErDT3-b3LwdAU1EbRhu2z86tZ0v-TWI3/view?usp=sharing">View Certificate</a>
+</div>
+
+<div class="card">
+  <div class="image-box"><img src="project/certi.png"></div>
+  <h4>UI/UX Bootcamp</h4>
+  <p>Issued by Great Edu</p>
+  <a class="action" href="https://drive.google.com/file/d/1wVTcDjhTvY_cgLhYcXh-q3kaJhZGr2v0/view?usp=sharing">View Certificate</a>
+</div>
+
+<div class="card">
+  <div class="image-box"><img src="project/certi.png"></div>
+  <h4>TOEFL Internet Test Prediction</h4>
+  <p>Issued by Golden English</p>
+  <a class="action" href="https://drive.google.com/file/d/1oic2Xqk9fdxMROKINGZfLv3v7yUQutSI/view?usp=sharing">View Certificate</a>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="reveal">
+<div class="glass">
+<h2>Projects</h2>
+<div class="grid">
+
+<div class="card"><div class="image-box">
+  <img src="project/present.png"></div>
+<h4>Interactive Forecasting of Game Voucher Sales using Prophet–XGBoost, Case Study JokiByAthena.</h4>
+<p>Flask-based interactive forecasting app — predict sales for 1, 7, or 30 days ahead</p>
+<a class="action" href="https://github.com/Kznrifky/prophetxgbforecasting/tree/main">View Project</a></div>
+
+<div class="card"><div class="image-box">
+  <img src="project/present.png"></div>
+  <h4>Kimia Farma Performance Dashboard 2020-2023</h4>
+  <p>Analyzed 4 years of Kimia Farma transaction data 2020–2023 to deliver business insights on sales, profit, and customer behavior through EDA, RFM segmentation, and interactive dashboards.</p>
+<a class="action" href="https://github.com/Kznrifky/rakaminkimiafarma/tree/main">View Project</a></div>
+
+<div class="card"><div class="image-box">
+  <img src="project/present.png"></div>
+  <h4>Coffee Sales Performance Dashboard</h4>
+  <p>Interactive dashboard analyzing coffee sales trends, product performance, and customer insights to drive strategic business decisions.</p>
+<a class="action" href="https://public.tableau.com/app/profile/muhammad.rifky7821/viz/CoffeeSalesPerformanceDashboard_17628777905360/Overview">View Dashboard</a></div>
+
+<div class="card"><div class="image-box">
+  <img src="project/forecast.png"></div>
+  <h4>A Lexicon-Based Sentiment Analysis of YouTube Comments on the Merah Putih One for All Animation</h4>
+<p>Collected and processed YouTube comments to perform lexicon-based into 3 sentiment classification positive, negative, and neutral.</p>
+<a class="action" href="https://github.com/Kznrifky/oneforallaentimentanalysis/tree/main">View Project</a></div>
+
+<div class="card"><div class="image-box">
+  <img src="project/forecast.png"></div>
+  <h4>Customer Risk Segmentation Using K-Means Clustering</h4>
+  <p>Developed a credit risk segmentation analysis to identify key drivers and classify customers by risk levels.</p>
+<a class="action" href="https://github.com/Kznrifky/customerkmeansegment/tree/main">View Project</a></div>
+
+<div class="card"><div class="image-box">
+  <img src="project/forecast.png"></div>
+  <h4>Mobile Legends Topup Dashboard</h4>
+  <p>Insights into Mobile Legends top-ups: trends, payments, and top-selling denominations</p>
+<a class="action" href="https://lookerstudio.google.com/u/0/reporting/6059507e-ff0c-4b85-ae44-8ff64d7bd9a0">View Dashboard</a></div>
+
+<div class="card"><div class="image-box">
+  <img src="project/dashboard.png"></div>
+  <h4>UI/UX Case Study Vessel Certificate Management System for PT. PELNI Surabaya</h4>
+  <p>Designed a user-friendly interface for managing vessel certificates in PT. PELNI Surabaya.</p>
+<a class="action" href="https://drive.google.com/file/d/1BzvatOqnYaoVO_ZqjLPh1I3zyfg-Bx1C/view">View Project</a></div>
+
+<div class="card"><div class="image-box">
+  <img src="project/dashboard.png"></div>
+  <h4>UI/UX Case Study Re-Trash, Mobile App for Waste Recycling</h4>
+  <p>ReTrash: The caring solution for your daily waste problem.</p>
+<a class="action" href="https://drive.google.com/file/d/1frRSB0MlaX1z7-_KkqcSGAIimJ7kwW1K/view">View Project</a></div>
+
+<div class="card"><div class="image-box">
+  <img src="project/dashboard.png"></div>
+  <h4>Interactive Chatbot</h4>
+  <p>Interactive Streamlit chatbot powered by Google Gemini AI for real-time conversations</p>
+<a class="action" href="https://github.com/Kznrifky/chatbothacktiv/tree/main">View Project</a></div>
+
+</div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+<div class="glass">
+<h2>Contact</h2>
+<div class="contact-grid">
+<a class="contact-card" href="kznrifkyyy@gmail.com">
+  📧 kznrifkyyy@gmail.com
+</a>
+
+<a class="contact-card" href="https://www.linkedin.com/in/kznrifky/" target="_blank">
+  💼 LinkedIn
+</a>
+
+<a class="contact-card" href="https://www.instagram.com/kznrifky/" target="_blank">
+  💻 Instagram
+</a>
+</div>
+</div>
+</section>
+
+<script>
+/* reveal animation */
+const reveals=document.querySelectorAll('.reveal');
+function revealOnScroll(){
+  const h=window.innerHeight;
+  reveals.forEach(el=>{
+    if(el.getBoundingClientRect().top<h-100){
+      el.classList.add('active');
+    }
+  });
+}
+window.addEventListener('scroll',revealOnScroll);
+revealOnScroll();
+
+/* skill bar */
+document.querySelectorAll('.skill-progress').forEach(bar=>{
+  bar.style.width=bar.dataset.level;
+});
+</script>
+
+</body>
+</html>
